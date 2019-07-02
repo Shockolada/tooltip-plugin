@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyTooltip</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mytooltip.css">
+</head>
+
+<body>
+  <div class="section__wrap section__wrap--dark">
+    <section class="section container">
+      <h2 class="section__title">I am a block with tooltip</h2>
+      <button class="section__btn element" title="I'm tooltip">Button</button>
+    </section>
+  </div>
+
+  <div class="section__wrap">
+    <section class="section container">
+      <h2 class="section__title">I am a block with tooltip</h2>
+      <a class="section__link element" href="#" title="I'm tooltip 2">Some link</a>
+    </section>
+  </div>
+
+  <div class="section__wrap section__wrap--dark">
+    <section class="section container">
+      <h2 class="section__title">I am a block with tooltip</h2>
+      <a class="section__link  element" href="#" title="I'm tooltip 3">Some link</a>
+    </section>
+  </div>
+
+  <div class="section__wrap">
+    <section class="section container">
+      <h2 class="section__title">I am a block with tooltip</h2>
+      <a class="section__link element" href="#" title="I'm tooltip 4">Some link</a>
+    </section>
+  </div>
+
+  <div class="section__wrap section__wrap--dark">
+    <section class="section container">
+      <h2 class="section__title">I am a block with tooltip</h2>
+      <button class="section__btn  element" title="I'm tooltip 5">Button</button>
+    </section>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/mytooltip.js" title="I'm your tooltip"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $('.element').myTooltip({
+        pulse : true
+      });
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  color: #0b0c17;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section__wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.section__wrap--dark {
+  background-color: #0b0c17;
+  color: #fff;
+}
+
+.section {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section__title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section__btn {
+  position: relative;
+  z-index: 1;
+  /* width: 30%; */
+  padding: 10px 30px;
+  border: 1px solid #1b7292;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+}
+
+.section__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background-color: #1b7292;
+
+  -webkit-transform: scaleX(0);
+
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+
+  -webkit-transition: all 0.2s linear;
+
+  transition: all 0.2s linear;
+}
+
+.section__btn:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.section__link {
+  position: relative;
+  font-family: inherit;
+  text-decoration: none;
+  color: #1b7292;
+}
+
+.section__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-color: #1b7292;
+
+  -webkit-transform: scaleX(0);
+
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+
+  -webkit-transition: all 0.2s linear;
+
+  transition: all 0.2s linear;
+}
+
+.section__link:hover::before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
